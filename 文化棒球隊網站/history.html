@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>球隊歷史</title>
+	<script>
+		
+		var imgpath=["history/深圳1.jpg","history/深圳2.jpg"];
+		var i = 0;
+		function init()
+		{
+		var xx = setInterval(Switchimg, 1000);
+		};
+		
+		function Switchimg()
+		{
+			document.getElementById("pic").src = imgpath[i];
+			i++;
+			if(i==2){
+				i=0;
+			}			
+		}
+		
+	</script>
+	<style>
+		#pic{
+			height: auto;
+			width: 70%;
+			margin-left: 15%;
+		
+		}
+
+	</style>
+</head>
+	
+
+<body onLoad="init()">
+	<img src="history/深圳.gif" id="pic">
+	<br>
+	<h3 align="center">歷史簡介</h3>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>文化乙組棒球隊</title>
+    <style>
+      #tit {
+        font-weight: bolder;
+        font-size: 70px;
+        background-color: darkgrey;
+        font-family: "標楷體";
+        height: 100px;
+        text-align: center;
+      }
+      body {
+        margin: 0px;
+        background-color: bisque;
+      }
+      #content {
+        border: 1px solid;
+        font-size: 60px;
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 270px;
+        text-align: center;
+        background-color: azure;
+      }
+      .d2 {
+        font-family: "標楷體";
+        color: black;
+        text-decoration: none;
+      }
+
+      #d1 {
+        border: 1px solid;
+        position: absolute;
+        top: 100px;
+        left: 270px;
+        right: 0;
+        bottom: 0;
+      }
+      .d3 {
+        padding-top: 40px;
+      }
+      #pic {
+        height: 90%;
+        width: 100%;
+      }
+      .d4 {
+        width: 10%;
+        float: left;
+        opacity: 0.5;
+        height: 10%;
+        position: relative;
+        top: -4px;
+      }
+      .d4:hover {
+        opacity: 1;
+      }
+    </style>
+    <script type="text/javascript">
+      var imgpath = [
+        "秋聯.jpg",
+        "789.jpg",
+        "123.jpg",
+        "456.jpg",
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "6.jpg",
+      ];
+      var i = 0;
+      var xx = 0;
+      window.onload = function () {
+        xx = setInterval(Switchimg, 1000);
+        document.getElementById("x" + 0).style.opacity = 1;
+      };
+      function Switchimg() {
+        for (var i11 = 0; i11 < 10; i11++) {
+          if (i11 != i) {
+            document.getElementById("x" + i11).style.opacity = 0.5;
+          }
+        }
+        document.getElementById("pic").src = imgpath[i];
+        document.getElementById("x" + i).style.opacity = 1;
+        i += 1;
+        if (i == 10) {
+          i = 0;
+        }
+      }
+
+//      function c1(y) {
+//        document.getElementById("x" + y).style.opacity = 1;
+//        for (var i11 = 0; i11 < 10; i11++) {
+//          if (i11 != y) {
+//            document.getElementById("x" + i11).style.opacity = 0.5;
+//          }
+//        }
+//        document.getElementById("x" + y).style.opacity = 1;
+//        document.getElementById("pic").src = imgpath[y];
+//        i = y;
+//        clearInterval(xx);
+//      }
+//
+//      function c2() {
+//        xx = setInterval(Switchimg, 1000);
+//      }
+//      function il(x) {}
+    </script>
+  </head>
+
+  <body>
+    <div id="tit">文化一般組棒球隊</div>
+    <div id="content">
+      <div class="d3"><a href="file:///C|/Users/User/Downloads/Introduction.html" class="d2">球隊介紹</a></div>
+      <div class="d3"><a href="file:///C|/Users/User/Downloads/history.html" class="d2">球隊歷史</a></div>
+      <div class="d3"><a href="file:///C|/Users/User/Downloads/player.html" class="d2">球員介紹</a></div>
+    </div>
+    <div id="d1">
+      <img id="pic" src="秋聯.jpg" />
+      <img
+        id="x0"
+        class="d4"
+        src="秋聯.jpg"
+        onClick="il(0)"
+        onmousemove="c1(0)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x1"
+        class="d4"
+        src="789.jpg"
+        onClick="il(1)"
+        onmousemove="c1(1)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x2"
+        class="d4"
+        src="123.jpg"
+        onClick="il(2)"
+        onmousemove="c1(2)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x3"
+        class="d4"
+        src="456.jpg"
+        onClick="il(3)"
+        onmousemove="c1(3)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x4"
+        class="d4"
+        src="1.jpg"
+        onClick="il(4)"
+        onmousemove="c1(4)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x5"
+        class="d4"
+        src="2.jpg"
+        onClick="il(5)"
+        onmousemove="c1(5)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x6"
+        class="d4"
+        src="3.jpg"
+        onClick="il(6)"
+        onmousemove="c1(6)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x7"
+        class="d4"
+        src="4.jpg"
+        onClick="il(7)"
+        onmousemove="c1(7)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x8"
+        class="d4"
+        src="5.jpg"
+        onClick="il(8)"
+        onmousemove="c1(8)"
+        onmouseout="c2()"
+      />
+      <img
+        id="x9"
+        class="d4"
+        src="6.jpg"
+        onClick="il(9)"
+        onmousemove="c1(9)"
+        onmouseout="c2()"
+      />
+    </div>
+  </body>
+</html>
