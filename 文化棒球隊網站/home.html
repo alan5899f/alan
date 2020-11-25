@@ -115,7 +115,7 @@
 	}
 		function getData(page){
 			var req =new XMLHttpRequest;
-			req.open("get","http://127.0.0.1:80/"+page);
+			req.open("get","https://alan5899f.github.io/alan/%E6%96%87%E5%8C%96%E6%A3%92%E7%90%83%E9%9A%8A%E7%B6%B2%E7%AB%99/"+page);
 			req.onload = function(){
 				var Introduction = document.getElementById("d1");
 				Introduction.innerHTML = this.response;
@@ -138,7 +138,7 @@
 		<div class="d3" onClick="getData('player.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >球員介紹</a></div>
 		<div class="d3" onClick="getData('sport.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >設施介紹</a></div>
 		<div class="d3" onClick="getData('User.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >關於宵夜</a></div>
-		<div class="d3" onClick="location.href='http://127.0.0.1/home.html'" onMouseOver="over(this)" onMouseOut="out(this)" ><a href="#" class="d2" >回首頁</a></div>
+		<div class="d3" onClick="location.href='https://alan5899f.github.io/alan/%E6%96%87%E5%8C%96%E6%A3%92%E7%90%83%E9%9A%8A%E7%B6%B2%E7%AB%99/home.html'" onMouseOver="over(this)" onMouseOut="out(this)" ><a href="#" class="d2" >回首頁</a></div>
 	</div>
 	<div id="d1">
 		<img id="pic" src="home/秋聯.jpg">
