@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>文化乙組棒球隊</title>
+	<style>
+		#tit{
+			
+			font-weight: bolder;
+			font-size: 70px;
+			background-color:#AFE8F7;
+			font-family: "標楷體";
+			height: 100px;
+			margin-left: 0px;
+			margin-right: 0px;
+			text-align: center;
+			position: relative;
+
+		}
+		body{
+			margin: 0px;
+			background-color: bisque;
+		}
+		#content{
+
+			font-size: 40px;
+			position:absolute;
+			height: 60%;
+			width: 270px;
+			text-align: center;
+
+		}
+		#d1{
+
+			position: absolute;
+			top:100px;
+			left: 270px;
+			right: 0;
+			bottom: 0;
+			
+			}
+		.d2{
+			font-family: "標楷體";
+			color: black;
+			text-decoration:none;
+		}
+		.d3{
+			padding-top: 40px;
+			border: 2px solid;
+			margin: 10px;
+			height: auto;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			border-radius:50px;
+			background-color: white;
+		
+
+			
+			background: 
+		}
+		
+		.d4{
+			width:10%;
+ 			float:left;
+			opacity:0.5;
+			height:auto;
+			position:relative;
+			top:-4px;
+		}
+		.d4:hover{
+       	    opacity:1;
+        }
+		#pic{
+			height: auto;
+			width: 100%;
+		}
+	</style>
+	
+	<script>
+		var imgpath=["home/秋聯.jpg","home/789.jpg","home/123.jpg","home/456.jpg","home/1.jpg","home/2.jpg","home/3.jpg","home/4.jpg","home/5.jpg","home/6.jpg"];
+		var i = 0;
+		function init() 
+		{
+        var xx = setInterval(Switchimg, 1000);
+		document.getElementById("x0").style.opacity = 1 ;
+		};
+		
+        function Switchimg() {
+    	for(var i11=0 ; i11 < 10 ; i11++ ){
+		
+		if(i11 != i){
+		document.getElementById("x" + i11).style.opacity = 0.5;
+		}
+		
+		}
+		
+		document.getElementById("pic").src=imgpath[i];
+		
+		document.getElementById("x" + i).style.opacity = 1;
+		
+        i ++;
+        if (i == 10) {
+          i = 0;
+        }
+		}
+	
+		
+		
+		
+		
+		function il(x)
+	{
+		document.getElementById("pic").src=imgpath[x];
+		i=x;
+	}
+		function getData(page){
+			var req =new XMLHttpRequest;
+			req.open("get","https://alan5899f.github.io/alan/%E6%96%87%E5%8C%96%E6%A3%92%E7%90%83%E9%9A%8A%E7%B6%B2%E7%AB%99/"+page);
+			req.onload = function(){
+				var Introduction = document.getElementById("d1");
+				Introduction.innerHTML = this.response;
+			};
+			req.send();
+		}
+		function over(element){
+			element.style.backgroundColor="#59FFFF";
+		}
+		function out(element){
+			element.style.backgroundColor="white";
+		}
+	</script>
+</head>
+<body onLoad="init()">
+	<div id="tit">文 化 一 般 組 棒 球 隊</div>
+	<div id ="content">
+		<div class="d3" onClick="getData('Introduction.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >球隊介紹</a></div>
+		<div class="d3" onClick="getData('history.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >球隊歷史</a></div>
+		<div class="d3" onClick="getData('player.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >球員介紹</a></div>
+		<div class="d3" onClick="getData('sport.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >設施介紹</a></div>
+		<div class="d3" onClick="getData('User.html')" onMouseOver="over(this)" onMouseOut="out(this)"><a href="#" class="d2" >關於宵夜</a></div>
+		<div class="d3" onClick="location.href='https://alan5899f.github.io/alan/%E6%96%87%E5%8C%96%E6%A3%92%E7%90%83%E9%9A%8A%E7%B6%B2%E7%AB%99/home.html'" onMouseOver="over(this)" onMouseOut="out(this)" ><a href="#" class="d2" >回首頁</a></div>
+	</div>
+	<div id="d1">
+		<img id="pic" src="home/秋聯.jpg">
+		<img class="d4" src="home/秋聯.jpg" onClick="il(0)" id="x0">
+		<img class="d4" src="home/789.jpg" onClick="il(1)" id="x1">
+		<img class="d4" src="home/123.jpg" onClick="il(2)" id="x2">
+		<img class="d4" src="home/456.jpg" onClick="il(3)" id="x3">
+		<img class="d4" src="home/1.jpg" onClick="il(4)" id="x4">
+		<img class="d4" src="home/2.jpg" onClick="il(5)" id="x5">
+		<img class="d4" src="home/3.jpg" onClick="il(6)" id="x6">
+		<img class="d4" src="home/4.jpg" onClick="il(7)" id="x7">
+		<img class="d4" src="home/5.jpg" onClick="il(8)" id="x8">
+		<img class="d4" src="home/6.jpg" onClick="il(9)" id="x9">
+	</div>
+	
+</body>
+</html>
